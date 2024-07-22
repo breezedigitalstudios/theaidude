@@ -1,7 +1,7 @@
 {
     "categories": [
         {
-            "name": "Category 1",
+            "name": "ChatBots",
             "links": [
                 {
                     "title": "Example Website",
@@ -14,7 +14,7 @@
             ]
         },
         {
-            "name": "Category 2",
+            "name": "Text Editors",
             "links": [
                 {
                     "title": "Example Website 2",
