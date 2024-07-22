@@ -4,12 +4,12 @@
             "name": "ChatBots",
             "links": [
                 {
-                    "title": "Example Website",
-                    "url": "https://example.com"
+                    "title": "ChatGPT",
+                    "url": "https://chat.openai.com/"
                 },
                 {
-                    "title": "Another Example",
-                    "url": "https://anotherexample.com"
+                    "title": "Gemini",
+                    "url": "https://gemini.google.com/"
                 }
             ]
         },
@@ -17,8 +17,8 @@
             "name": "Text Editors",
             "links": [
                 {
-                    "title": "Example Website 2",
-                    "url": "https://example2.com"
+                    "title": "Notion",
+                    "url": "https://www.notion.so/product"
                 }
             ]
         }
