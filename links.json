@@ -8,12 +8,12 @@
                     "url": "https://chat.openai.com/"
                 },
                 {
-                    "title": "Gemini",
-                    "url": "https://gemini.google.com/"
-                },
-                {
                     "title": "Index 2",
                     "url": "index_2.html"
+                },
+                {
+                    "title": "Gemini",
+                    "url": "https://gemini.google.com/"
                 }
             ]
         },
