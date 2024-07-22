@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalistic Links Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .category {
+            margin: 20px 0;
+        }
+        .category h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .links {
+            list-style: none;
+            padding: 0;
+        }
+        .links li {
+            margin: 5px 0;
+        }
+        .links a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Links Page</h1>
+    <div id="content"></div>
+    <script>
+        fetch('links.json')
+            .then(response => response.json())
+            .then(data => {
+                const content = document.getElementById('content');
+                data.categories.forEach(category => {
+                    const categoryDiv = document.createElement('div');
+                    categoryDiv.classList.add('category');
+
+                    const categoryTitle = document.createElement('h2');
+                    categoryTitle.textContent = category.name;
+                    categoryDiv.appendChild(categoryTitle);
+
+                    const linksList = document.createElement('ul');
+                    linksList.classList.add('links');
+                    category.links.forEach(link => {
+                        const linkItem = document.createElement('li');
+                        const linkAnchor = document.createElement('a');
+                        linkAnchor.href = link.url;
+                        linkAnchor.textContent = link.title;
+                        linkAnchor.target = '_blank';
+                        linkItem.appendChild(linkAnchor);
+                        linksList.appendChild(linkItem);
+                    });
+
+                    categoryDiv.appendChild(linksList);
+                    content.appendChild(categoryDiv);
+                });
+            });
+    </script>
+</body>
+</html>
